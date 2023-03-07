@@ -1,0 +1,89 @@
+body{
+    margin: 0;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, #12B50E 0%, rgba(2, 122, 79, 0.97) 100%);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width: 50%;
+    text-align: center;
+}
+
+.login-container{
+    width: 50%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 40vh;
+    
+}
+
+button1{
+    background: rgba(24, 193, 26, 0.88);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    width: 50%;
+    color: white;
+    margin: 1em;
+    line-height: 3em;
+    font-family: 'Junge';
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+button2{
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    width: 50%;
+    color: white;
+    margin: 1em;
+    line-height: 3em;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+input{
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 30px;
+    color: grey;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    letter-spacing: 0.2em;
+    width: 50%;
+    margin: 1em;
+    line-height: 3em;
+}
+
+@media only screen and(max-width: 420px){
+    .container{
+        background-color: #FFFFFF;
+    }
+}
+    /*.container{
+        flex-direction: column;
+    }
+    * {
+        font-size: 36px;
+    }
+    .login-container, .logo{
+        width: 100%;
+    }*/
