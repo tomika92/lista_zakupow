@@ -1,11 +1,16 @@
 body{
     margin: 0;
+    background: linear-gradient(180deg, #12B50E 0%, rgba(2, 122, 79, 0.97) 100%);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-attachment: fixed;
 }
 
 .container{
     width: 100vw;
     height: 100vh;
     background: linear-gradient(180deg, #12B50E 0%, rgba(2, 122, 79, 0.97) 100%);
+    
 
     display: flex;
     flex-direction: row;
@@ -27,37 +32,39 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 90%;
     height: 40vh;
     
 }
 
-button1{
+#button1{
     background: rgba(24, 193, 26, 0.88);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
-    width: 50%;
+    width: 51%;
     color: white;
     margin: 1em;
     line-height: 3em;
-    font-family: 'Junge';
+    font-family: 'Junge', serif;
     text-align: center;
     letter-spacing: 0.2em;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
 }
 
-button2{
+#button2{
     border: 1px solid #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
-    width: 50%;
+    width: 51%;
     color: white;
     margin: 1em;
     line-height: 3em;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Junge', serif;
     text-align: center;
     letter-spacing: 0.2em;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: rgba(0,0,0,0);
 }
 
 input{
@@ -65,25 +72,414 @@ input{
     border: 1px solid #FFFFFF;
     border-radius: 30px;
     color: grey;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Junge', serif;
     text-align: center;
     letter-spacing: 0.2em;
     width: 50%;
     margin: 1em;
     line-height: 3em;
+    outline:none;
 }
 
-@media only screen and(max-width: 420px){
-    .container{
-        background-color: #FFFFFF;
+@media only screen and (max-width: 500px){
+    .container {
+        flex-direction: column;
+        justify-content: normal;
+    }
+
+    .login-container{
+        width: 100%;
+    }
+
+    .logo {
+        width: 100%;
+        font-size:18px;
+    }
+
+    form {
+        margin: auto;
+    }
+    img {
+        height: 13em;
+        margin: 2em;
+    }
+    input {
+        margin: 0.5em;
+        font-size:18px;
+        width:70%;
+    }
+    #button1 {
+        margin: 0.5em;
+        font-size:18px;
+        width:71%;
+    }
+    #button2 {
+        margin: 0.5em;
+        font-size:18px;
+        width:71%;
     }
 }
-    /*.container{
-        flex-direction: column;
+
+.container_list {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.home {
+    height: 7vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1em;
+}
+
+p {
+    font-family: 'Junge', serif;
+    color: white;
+    font-size: 40px;
+    letter-spacing: 0.2em;
+    font-weight: bold;
+    overflow: auto;
+    width: 90%;
+    padding-left: 0.5em;
+}
+
+.plus {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+#plusb {
+    background: rgba(0,0,0,0);
+    font-size: 50px;
+    border: none;
+    color: white;
+    text-align:center;
+}
+
+.list {
+    display: flex;
+    width: 95%;
+    font-family: 'Junge', serif;
+    flex-direction: column;
+    margin: 1em;
+}
+
+.list>div {
+    width: 80%;
+    text-align: center;
+    margin:auto;
+    background: #15CA27;
+    border-radius: 20px;
+}
+
+.list>div>input {
+    background: #15CA27;
+    border: none;
+    color: white;
+    font-size: 24px;
+    font-weight:bold;
+    margin: 0em;
+    width: 70%;
+    text-align: left;
+    line-height: 2.5em;
+}
+
+.list>div>input::placeholder {
+    color: white;
+}
+
+.list>div>button {
+    width: 10%;
+    border: none;
+    box-shadow: none;
+    background: #15CA27;
+    color: white;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+
+#logout {
+    background: rgba(0,0,0,0);
+    font-size: 40px;
+    border: none;
+    color: white;
+    text-align: right;
+}
+
+@media only screen and (max-width: 500px){
+    #logout {
+        font-size: 40px;
     }
-    * {
-        font-size: 36px;
+    
+    #plusb{
+        margin-top: 0.5em;
     }
-    .login-container, .logo{
+
+    .home {
+        height: 10vw;
+    }
+}
+
+.logo2{
+    width: 50%;
+    text-align: center;
+}
+
+#create {
+    font-size: 30px;
+    width: 90%;
+    text-align: center;
+    padding-left: 0em;
+    letter-spacing:0.1em;
+    margin-bottom:0.5em;
+}
+
+.register-container{
+    width: 50%;
+    height: 65%;
+}
+
+.register-container>form>input {
+    margin:0.5em;
+}
+
+
+.register-container>form>#button1 {
+    margin: 0.5em;
+}
+
+@media only screen and (max-width: 500px){
+    .logo2{
         width: 100%;
-    }*/
+        font-size:18px;
+    }
+    .logo2>img {
+        margin-bottom: 0em;
+        margin-top: 1em;
+    }
+
+    .register-container {
+        width:100%;
+    }
+
+    #create {
+        font-size: 24px;
+        width: 100%;
+        margin-top: 0.8em;
+        margin-bottom: 1.5em;
+    }
+
+    .register-container>form>input {
+        font-size: 18px;
+        width: 70%;
+        line-height: 2.7em;
+    }
+    .register-container>form>#button1 {
+        font-size: 20px;
+        width: 71%;
+        line-height: 2.7em;
+    }
+}
+
+.block {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 1em 1em 0em 3em;
+}
+
+.block>div {
+    display: flex;
+    flex: 0 0 49%;
+    flex-direction: row;
+    background: rgba(24, 193, 26, 0.88);
+    margin: 0.1em;
+    border-radius: 10px;
+    align-self: start;
+}
+
+#arrow {
+    background: rgba(0,0,0,0);
+    font-size: 40px;
+    border: none;
+    color: white;
+    text-align: left;
+}
+
+#add_user {
+    background: rgba(0,0,0,0);
+    font-size: 40px;
+    border: none;
+    color: white;
+    text-align: right;
+    padding-right: 1em;
+}
+
+.home2 {
+    height: 7vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1em 2em 1em 2em;
+}
+
+#check {
+    background: rgba(0,0,0,0);
+    font-size: 35px;
+    border: none;
+    color: white;
+    text-align: left;
+}
+
+.block>div>p {
+    font-family: 'Junge', serif;
+    color: white;
+    font-size: 30px;
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    overflow: auto;
+    width: 90%;
+    padding-left: 0.5em;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
+.block>div>input{
+    background: rgba(45, 231, 10, 0.4);
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0em;
+    width: 10%;
+    text-align: left;
+    line-height: 3em;
+    letter-spacing: 0.1em;
+    border: none;
+    margin: 0.2em;
+    border-radius: 20px;
+    font-family: 'Junge', serif;
+    color: white;
+    text-align: center;
+}
+
+select {
+    width: 10%;
+    background: rgba(45, 231, 10, 0.4);
+    color: white;
+    border: none;
+    margin: 0.2em;
+    border-radius: 20px;
+    font-family: 'Junge', serif;
+    padding: 0.2em;
+    font-size: 16px;
+}
+
+select option {
+    background: rgba(24, 193, 26, 0.88);
+    font-family: 'Junge',serif;
+    font-size: 16px;
+}
+
+.ob23, .ob23>input {
+    background: rgba(0,0,0,0) !important;
+}
+
+.ob23>select{
+    background: rgba(0,0,0,0) !important;
+    color: rgba(0,0,0,0);
+}
+
+@media only screen and (max-width: 500px){
+    .block>div {
+        flex:0 0 100%;
+        max-width:100%;
+    }
+
+    .home2 {
+        padding: 3em 1em 1em 1em;
+        margin: 0em;
+    }
+
+    #add_user {
+        padding-right: 0em;
+    }
+
+    .block {
+        margin: 0.5em;
+    }
+
+    .block>div>input {
+        width: 15%;
+    }
+
+    select {
+        width:20%;
+    }
+}
+
+.home2>input {
+    background: rgba(45,119,10,1);
+    border: none;
+    color: lightgrey;
+    width: 90%;
+    display: flex;
+    line-height: 2.5em;
+    font-size: 24px;
+}
+
+.home2>input::placeholder {
+    color: lightgrey;
+}
+
+.block2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 1em 1em 0em 3em;
+}
+
+.block2>div {
+    display: flex;
+    flex: 0 0 49%;
+    flex-direction: row;
+    background: rgba(0,0,0,0);
+    margin: 0.1em;
+    border-radius: 10px;
+    align-self: start;
+    border:1px solid rgba(24, 193, 26, 0.88);
+}
+
+.block2>div>p {
+    font-family: 'Junge', serif;
+    color: white;
+    font-size: 30px;
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    overflow: auto;
+    width: 90%;
+    padding-left: 0.5em;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
+@media only screen and (max-width: 500px){
+    .block2>div {
+        flex:0 0 100%;
+        max-width:100%;
+    }
+
+    .block2 {
+        margin: 0.5em;
+        margin-top: 1.5em;
+    }
+
+    .block2>div>input {
+        width: 15%;
+    }
+}
